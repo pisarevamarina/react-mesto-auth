@@ -1,0 +1,47 @@
+@import url(./__form/popup__form.css);
+@import url(./__input/popup__input.css);
+@import url(./__title/popup__title.css);
+@import url(./__input/_type/popup__input_type_info.css);
+@import url(./__input/_type/popup__input_type_name.css);
+@import url(./__input/_type/popup__input_type_image-link.css);
+@import url(./__input/_type/popup__input_type_title.css);
+@import url(./__exit-button/popup__exit-button.css);
+@import url(./__submit-button/popup__submit-button.css);
+@import url(./__submit-button/_type/popup__submit-button_type_create.css);
+@import url(./__submit-button/_type/popup__submit-button_type_save.css);
+@import url(./__create-card-button/popup__create-card-button.css);
+@import url(./__image/popup__image.css);
+@import url(./_type/popup_type_image.css);
+@import url(./__bottom-title/popup__bottom-title.css);
+@import url(./__container/popup__container.css);
+@import url(./__exit-button/_type/popup__exit-button_type_image-popup.css);
+@import url(./__title/_type/popup__title_type_confirm-deleting.css);
+@import url(./__input/_type/popup__input_type_avatar.css);
+@import url(./__auth-title/popup__auth-title.css);
+@import url(./__auth-img/popup__auth-img.css);
+@import url(./__auth-text/popup__auth-text.css);
+
+.popup{
+background-color: rgba(0, 0, 0, 0.5);
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-left: 15px;
+padding-right: 15px;
+visibility: hidden;
+opacity: 0;
+transition: visibility 0.4s, opacity 0.5s linear;
+}
+
+
+@media screen and (max-width: 500px) {
+    .popup{
+padding: 0 40px;
+}
+}

@@ -1,0 +1,4 @@
+.header_type_auth{
+    display: flex;
+    justify-content: space-between;
+}

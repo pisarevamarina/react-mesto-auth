@@ -1,0 +1,7 @@
+@import url(./__list/grid-elements__list.css);
+
+.grid-elements{
+display: flex;
+margin: 0 auto;
+}
+

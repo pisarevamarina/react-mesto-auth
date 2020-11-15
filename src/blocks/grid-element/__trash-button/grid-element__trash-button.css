@@ -1,0 +1,20 @@
+.grid-element__trash-button{
+    background-image: url(../../../images/Trash.svg);
+    background-position: center;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    width: 18px;
+    height: 19px;
+}
+
+.grid-element__trash-button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+opacity: .6;
+}
