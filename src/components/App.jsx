@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
+import { Route, useHistory, Redirect, Switch } from 'react-router-dom'
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -13,6 +13,7 @@ import AddPlacePopup from './AddPlacePopup';
 import Register from "./Register";
 import Login from "./Login";
 import ProtectedRoute from "./ProtectedRoute";
+import * as auth from '../auth'
 
 
 function App() {
@@ -26,6 +27,11 @@ function App() {
   const [selectedCard, setSelectedCard] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState('');
   const [cards, setCards] = React.useState([]);
+  const [email, setEmail] = React.useState('');
+  const [loggedIn, setLoggedIn] = React.useState(false);
+  const [registered, setRegistered] = React.useState(false);
+
+  const history = useHistory()
 
   React.useEffect(() => {
     api
@@ -128,16 +134,87 @@ function App() {
       });
   }
 
+  function onRegister(email, password) {
+    auth.register(email, password)
+        .then((res) => {
+          if (res.statusCode !== 400 ) {
+            setRegistered(true)
+            history.push('/sign-in');
+          } else {
+            setRegistered(false)
+            history.push('/sign-up')
+          }
+        })
+        .catch((err) => {
+          setRegistered(false)
+          if (err === 400) {
+            console.log('Некорректно заполнено одно из полей')
+          }
+        })
+  }
+
+  function onLogin(email, password) {
+    auth.authorize(email, password)
+        .then((data) => {
+          console.log(data)
+          if(data.token) {
+            setEmail(email)
+            setLoggedIn(true)
+            localStorage.setItem('token', data.token)
+            history.push('/')
+          }
+        })
+        .catch((err) => {
+          if (err.status === 400) {
+            return console.log('Не передано одно из полей')
+          }
+          if (err.status === 401) {
+            return console.log('Пользователь с таким email не найден')
+          }
+        })
+  }
+
+  function tokenCheck() {
+    const token = localStorage.getItem('token');
+    if(token) {
+      auth.getUserInfo(token)
+          .then((data)=> {
+            setEmail(data.email)
+              history.push('/')
+            }
+          )
+          .catch((err) => {
+            if (err.status === 401 ) {
+              return console.log('Токен не передан или передан не в том формате')
+            } else {
+             return console.log('Переданный токен некорректен')
+            }
+    })
+  }
+  }
+  React.useEffect(() => {
+    tokenCheck();
+  }, []);
+
+  function OnSignOut () {
+    localStorage.removeItem('token');
+    setLoggedIn(false)
+    history.push('/sign-in')
+  }
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className='page-container'>
-        <Route path='/signIn'>
-          <Login />
+        <Switch>
+        <Route path='/sign-in'>
+          <Login onLogin={onLogin}/>
         </Route>
-        <Route path='/signUp'>
-          <Register />
+        <Route path='/sign-up'>
+          <Register onRegister={onRegister}/>
         </Route>
-        <ProtectedRoute exact path='/' >
+          <Route exact path="/">
+            {loggedIn ? <Redirect to="/sign-in" /> : <Redirect to="/sign-up" />}
+          </Route>
+        <ProtectedRoute exact path='/'  loginIn={loggedIn}>
           <Header />
           <Main
               handleEditAvatar={handleEditAvatarClick}
@@ -176,7 +253,7 @@ function App() {
 
           <Footer />
         </ProtectedRoute>
-
+        </Switch>
       </div>
     </CurrentUserContext.Provider>
   );

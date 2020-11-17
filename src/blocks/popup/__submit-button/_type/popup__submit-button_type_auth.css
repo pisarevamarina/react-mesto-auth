@@ -5,3 +5,8 @@
     color: black;
     margin-top: 216px;
 }
+.popup__submit-button_type_auth:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+
+}
