@@ -27,7 +27,23 @@
   <component name="ChangeListManager">
     <list default="true" id="d73b66f9-6583-4cc0-bf58-1ad8bc966981" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/header/__exit-link/header__exit-link.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/__exit-button/header__exit-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__auth-title/popup__auth-title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__auth-title/popup__auth-title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__form/_type/popup__form_type_auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__form/_type/popup__form_type_auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InfoTooltip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InfoTooltip.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/baikal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/crimea.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/dombay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/krasnodar.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rostov.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/roza-khutor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +91,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605380318112</updated>
-      <workItem from="1605380319571" duration="26488000" />
+      <workItem from="1605380319571" duration="28595000" />
+      <workItem from="1605727914608" duration="43000" />
+      <workItem from="1605728013421" duration="3000" />
+      <workItem from="1605728110144" duration="5859000" />
     </task>
     <servers />
   </component>
@@ -104,6 +123,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="197" y="227" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605384367465">

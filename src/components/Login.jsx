@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../images/header__logo.png'
 import Form from "./Form";
 
-export default function Register ({ onLogin }) {
+export default function Login ({ onLogin }) {
     const [value, setValue] = React.useState({
         email: '',
         password: ''

@@ -14,6 +14,7 @@ import Register from "./Register";
 import Login from "./Login";
 import ProtectedRoute from "./ProtectedRoute";
 import * as auth from '../auth'
+import InfoTooltip from "./InfoTooltip";
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
   const [email, setEmail] = React.useState('');
   const [loggedIn, setLoggedIn] = React.useState(false);
   const [registered, setRegistered] = React.useState(false);
+  const [isInfoTooltipOpen, setIsInfoToolTipOpen] = React.useState(true);
+  const [failRegistration, setFailRegistration] = React.useState(false)
 
   const history = useHistory()
 
@@ -72,6 +75,7 @@ function App() {
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setSelectedCard(false);
+    setIsInfoToolTipOpen(false);
   }
 
   function handleCardClick(card) {
@@ -133,6 +137,7 @@ function App() {
         console.log(err);
       });
   }
+console.log(email)
 
   function onRegister(email, password) {
     auth.register(email, password)
@@ -141,14 +146,13 @@ function App() {
             setRegistered(true)
             history.push('/sign-in');
           } else {
-            setRegistered(false)
+            setFailRegistration(true)
             history.push('/sign-up')
           }
         })
         .catch((err) => {
-          setRegistered(false)
           if (err === 400) {
-            console.log('Некорректно заполнено одно из полей')
+            return console.log('Некорректно заполнено одно из полей')
           }
         })
   }
@@ -156,9 +160,9 @@ function App() {
   function onLogin(email, password) {
     auth.authorize(email, password)
         .then((data) => {
-          console.log(data)
           if(data.token) {
             setEmail(email)
+            console.log(email)
             setLoggedIn(true)
             localStorage.setItem('token', data.token)
             history.push('/')
@@ -179,7 +183,7 @@ function App() {
     if(token) {
       auth.getUserInfo(token)
           .then((data)=> {
-            setEmail(data.email)
+            setLoggedIn(true)
               history.push('/')
             }
           )
@@ -196,7 +200,7 @@ function App() {
     tokenCheck();
   }, []);
 
-  function OnSignOut () {
+  function onSignOut () {
     localStorage.removeItem('token');
     setLoggedIn(false)
     history.push('/sign-in')
@@ -209,13 +213,14 @@ function App() {
           <Login onLogin={onLogin}/>
         </Route>
         <Route path='/sign-up'>
+          {
+            failRegistration ? <InfoTooltip isOpen={isInfoTooltipOpen} onClose={closeAllPopups} title={'Вы не успешно зарегистрировались!'}  />
+          }
           <Register onRegister={onRegister}/>
         </Route>
-          <Route exact path="/">
-            {loggedIn ? <Redirect to="/sign-in" /> : <Redirect to="/sign-up" />}
-          </Route>
         <ProtectedRoute exact path='/' loginIn={loggedIn}>
-          <Header />
+          <Header email={email} onSignOut={onSignOut}/>
+          <InfoTooltip isOpen={isInfoTooltipOpen} onClose={closeAllPopups} title={'Вы успешно зарегистрировались!'} />
           <Main
               handleEditAvatar={handleEditAvatarClick}
               handleAddPlace={handleAddPlaceClick}

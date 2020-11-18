@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import Form from './Form';
 import logo from '../images/header__logo.png'
-import successImg from '../images/success.png'
+
 
 export default function Register ({ onRegister}) {
 

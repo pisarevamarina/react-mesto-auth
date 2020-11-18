@@ -3,7 +3,7 @@
 @import url(./blocks/root/root.css);
 @import url(./blocks/page-container/page-container.css);
 @import url(./blocks/header/header.css);
-@import url(./blocks/header/__exit-link/header__exit-link.css);
+@import url(blocks/header/__exit-button/header__exit-button.css);
 @import url(./blocks/profile/profile.css);
 @import url(./blocks/grid-elements/grid-elements.css);
 @import url(./blocks/grid-element/grid-element.css);
@@ -18,6 +18,7 @@
 @import url(./blocks/popup/__input-error/popup__input-error.css);
 @import url(./blocks/popup/__input-error/_active/popup__input-error_active.css);
 @import url(./blocks/popup/__form/_type/popup__form_type_edit-profile.css);
+@import url(./blocks/popup/__form/_type/popup__form_type_infoToolTip.css);
 @import url(./blocks/popup/__form/_type/popup__form_type_new-card.css);
 @import url(./blocks/form/form.css);
 @import url(./blocks/popup/__form/_type/popup__form_type_auth.css);
@@ -25,3 +26,4 @@
 @import url(./blocks/popup/__submit-button/_type/popup__submit-button_type_auth.css);
 @import url(./blocks/header/_type/header_type_auth.css);
 @import url(./blocks/popup/__title/_type/popup__title_type_auth.css);
+@import url(./blocks/popup/_type/popup_type_auth.css);

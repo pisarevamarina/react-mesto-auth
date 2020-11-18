@@ -1,11 +1,15 @@
 @import url(./__logo/header__logo.css);
+@import url(./__container/header__container.css);
+@import url(./__exit-button/header__exit-button.css);
+@import url(./__email/header__email.css);
+@import url(./__exit-link/header__exit-link.css);
 
 .header{
     margin: 45px auto 40px;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
     max-width: 882px;
-
-
+    display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 900px) {
