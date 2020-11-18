@@ -213,9 +213,6 @@ console.log(email)
           <Login onLogin={onLogin}/>
         </Route>
         <Route path='/sign-up'>
-          {
-            failRegistration ? <InfoTooltip isOpen={isInfoTooltipOpen} onClose={closeAllPopups} title={'Вы не успешно зарегистрировались!'}  />
-          }
           <Register onRegister={onRegister}/>
         </Route>
         <ProtectedRoute exact path='/' loginIn={loggedIn}>
