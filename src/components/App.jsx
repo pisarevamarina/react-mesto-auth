@@ -214,7 +214,7 @@ function App() {
           <Route exact path="/">
             {loggedIn ? <Redirect to="/sign-in" /> : <Redirect to="/sign-up" />}
           </Route>
-        <ProtectedRoute exact path='/'  loginIn={loggedIn}>
+        <ProtectedRoute exact path='/' loginIn={loggedIn}>
           <Header />
           <Main
               handleEditAvatar={handleEditAvatarClick}
