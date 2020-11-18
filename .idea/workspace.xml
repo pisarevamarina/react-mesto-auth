@@ -27,8 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d73b66f9-6583-4cc0-bf58-1ad8bc966981" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605380318112</updated>
-      <workItem from="1605380319571" duration="25883000" />
+      <workItem from="1605380319571" duration="26488000" />
     </task>
     <servers />
   </component>
@@ -115,5 +114,9 @@
       <screen x="0" y="23" width="1792" height="1046" />
     </state>
     <state x="409" y="185" key="SettingsEditor/0.23.1792.1046@0.23.1792.1046" timestamp="1605453604202" />
+    <state x="642" y="452" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1605693641786">
+      <screen x="0" y="23" width="1792" height="1046" />
+    </state>
+    <state x="642" y="452" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1792.1046@0.23.1792.1046" timestamp="1605693641786" />
   </component>
 </project>

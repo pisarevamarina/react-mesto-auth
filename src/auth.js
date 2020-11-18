@@ -18,7 +18,7 @@ export const register = (email, password) => {
         body: JSON.stringify({ email, password })
     })
         .then((res) => {
-           getResponseData(res)
+           return getResponseData(res)
         })
 }
 
@@ -31,7 +31,7 @@ export const authorize = (email, password) => {
         body: JSON.stringify({ password, email }),
     })
         .then((res) => {
-            getResponseData(res)
+          return  getResponseData(res)
         })
 }
 
@@ -44,7 +44,7 @@ export const getUserInfo = (token) => {
         }
     })
         .then((res) => {
-            getResponseData(res);
+           return getResponseData(res);
         })
 
 }
