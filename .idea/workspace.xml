@@ -25,25 +25,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73b66f9-6583-4cc0-bf58-1ad8bc966981" name="Default Changelist" comment="">
+    <list default="true" id="d73b66f9-6583-4cc0-bf58-1ad8bc966981" name="Default Changelist" comment="added InfoToolTip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/header/__exit-link/header__exit-link.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/__exit-button/header__exit-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__auth-title/popup__auth-title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__auth-title/popup__auth-title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__form/_type/popup__form_type_auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__form/_type/popup__form_type_auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.a5163ae5.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/js/runtime-main.a5163ae5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/InfoTooltip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InfoTooltip.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/baikal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/crimea.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/dombay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/krasnodar.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/rostov.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/roza-khutor.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +50,17 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1kIFhUeUv2TLhvqGnilezECqofB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -71,7 +74,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -94,8 +97,24 @@
       <workItem from="1605380319571" duration="28595000" />
       <workItem from="1605727914608" duration="43000" />
       <workItem from="1605728013421" duration="3000" />
-      <workItem from="1605728110144" duration="5859000" />
+      <workItem from="1605728110144" duration="8835000" />
+      <workItem from="1605816064956" duration="468000" />
     </task>
+    <task id="LOCAL-00001" summary="added InfoToolTip">
+      <created>1605735021320</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605735021320</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added InfoToolTip">
+      <created>1605735183920</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605735183920</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,15 +144,27 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added InfoToolTip" />
+    <option name="LAST_COMMIT_MESSAGE" value="added InfoToolTip" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="197" y="227" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605384367465">
       <screen x="0" y="23" width="1792" height="1046" />
     </state>
     <state x="197" y="227" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1046@0.23.1792.1046" timestamp="1605384367465" />
-    <state x="409" y="185" key="SettingsEditor" timestamp="1605453604202">
+    <state x="645" y="332" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1605815968030">
       <screen x="0" y="23" width="1792" height="1046" />
     </state>
-    <state x="409" y="185" key="SettingsEditor/0.23.1792.1046@0.23.1792.1046" timestamp="1605453604202" />
+    <state x="645" y="332" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.23.1792.1046@0.23.1792.1046" timestamp="1605815968030" />
+    <state x="409" y="185" key="SettingsEditor" timestamp="1605816142091">
+      <screen x="0" y="23" width="1792" height="1046" />
+    </state>
+    <state x="409" y="185" key="SettingsEditor/0.23.1792.1046@0.23.1792.1046" timestamp="1605816142091" />
+    <state x="538" y="286" key="Vcs.Push.Dialog.v2" timestamp="1605735192240">
+      <screen x="0" y="23" width="1792" height="1046" />
+    </state>
+    <state x="538" y="286" key="Vcs.Push.Dialog.v2/0.23.1792.1046@0.23.1792.1046" timestamp="1605735192240" />
     <state x="642" y="452" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1605693641786">
       <screen x="0" y="23" width="1792" height="1046" />
     </state>

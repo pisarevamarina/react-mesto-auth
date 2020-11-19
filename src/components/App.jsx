@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, useHistory, Redirect, Switch } from 'react-router-dom'
+import { Route, useHistory, Switch } from 'react-router-dom'
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -30,9 +30,9 @@ function App() {
   const [cards, setCards] = React.useState([]);
   const [email, setEmail] = React.useState('');
   const [loggedIn, setLoggedIn] = React.useState(false);
-  const [registered, setRegistered] = React.useState(false);
-  const [isInfoTooltipOpen, setIsInfoToolTipOpen] = React.useState(true);
-  const [failRegistration, setFailRegistration] = React.useState(false)
+  const [isInfoTooltipOpen, setIsInfoToolTipOpen] = React.useState(false);
+  const [InfoTooltipTitle, setInfoTooltipTitle] = React.useState('');
+  const [isInfoTooltipSuccess, setIsInfoTooltipSuccess] =  React.useState(false);
 
   const history = useHistory()
 
@@ -137,20 +137,22 @@ function App() {
         console.log(err);
       });
   }
-console.log(email)
 
   function onRegister(email, password) {
     auth.register(email, password)
         .then((res) => {
           if (res.statusCode !== 400 ) {
-            setRegistered(true)
+            setIsInfoTooltipSuccess(true)
+            setInfoTooltipTitle('Вы успешно зарегистрировались!')
+            setIsInfoToolTipOpen(true)
             history.push('/sign-in');
-          } else {
-            setFailRegistration(true)
-            history.push('/sign-up')
           }
         })
         .catch((err) => {
+            setIsInfoTooltipSuccess(false)
+            setInfoTooltipTitle('Что-то пошло не так! Попробуйте ещё раз.')
+            setIsInfoToolTipOpen(true)
+            history.push('/sign-up')
           if (err === 400) {
             return console.log('Некорректно заполнено одно из полей')
           }
@@ -162,13 +164,16 @@ console.log(email)
         .then((data) => {
           if(data.token) {
             setEmail(email)
-            console.log(email)
             setLoggedIn(true)
             localStorage.setItem('token', data.token)
             history.push('/')
           }
         })
         .catch((err) => {
+          setIsInfoTooltipSuccess(false)
+          setInfoTooltipTitle('Что-то пошло не так! Попробуйте ещё раз.')
+          setIsInfoToolTipOpen(true)
+          history.push('/sign-up')
           if (err.status === 400) {
             return console.log('Не передано одно из полей')
           }
@@ -183,6 +188,7 @@ console.log(email)
     if(token) {
       auth.getUserInfo(token)
           .then((data)=> {
+            setEmail(data.data.email)
             setLoggedIn(true)
               history.push('/')
             }
@@ -217,7 +223,6 @@ console.log(email)
         </Route>
         <ProtectedRoute exact path='/' loginIn={loggedIn}>
           <Header email={email} onSignOut={onSignOut}/>
-          <InfoTooltip isOpen={isInfoTooltipOpen} onClose={closeAllPopups} title={'Вы успешно зарегистрировались!'} />
           <Main
               handleEditAvatar={handleEditAvatarClick}
               handleAddPlace={handleAddPlaceClick}
@@ -256,6 +261,7 @@ console.log(email)
           <Footer />
         </ProtectedRoute>
         </Switch>
+        <InfoTooltip isOpen={isInfoTooltipOpen} onClose={closeAllPopups}  isSuccess={isInfoTooltipSuccess} title={InfoTooltipTitle}/>
       </div>
     </CurrentUserContext.Provider>
   );
