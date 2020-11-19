@@ -2,7 +2,7 @@
   "name": "mesto-react",
   "description": "* This app allowed you to post your photos in your personal travel blog *",
   "author": "Pisareva Marina",
-  "homepage": ".",
+  "homepage": "https://pisarevamarina.github.io/react-mesto-auth",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
